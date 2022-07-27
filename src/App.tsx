@@ -1,11 +1,11 @@
+import { Header } from "./components/Header";
 import "./styles/App.css";
 
-function App() {
+export function App() {
   return (
     <>
+      <Header />
       <p>Home Page</p>
     </>
   );
 }
-
-export default App;
