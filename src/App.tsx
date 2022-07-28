@@ -1,10 +1,11 @@
 import { Header } from "./components/Header";
-import "./styles/App.css";
+import { AddTodo } from "./components/AddTodo/index";
 
 export function App() {
   return (
     <>
       <Header />
+      <AddTodo />
       <p>Home Page</p>
     </>
   );
