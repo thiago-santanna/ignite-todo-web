@@ -1,4 +1,5 @@
 import { EmptyTodo } from "../EmptyTodo";
+import { ListTodo } from "../ListTodo";
 import styles from "./Todo.module.css";
 
 export function Todo() {
@@ -20,7 +21,13 @@ export function Todo() {
           </div>
         </div>
         {/* Aqui depende da lista de Todos, um componente ou outro */}
-        <EmptyTodo />
+        {/* <EmptyTodo /> */}
+        {/* ou */}
+        <ListTodo />
+        <ListTodo />
+        <ListTodo />
+        <ListTodo />
+        <ListTodo />
       </div>
     </>
   );
