@@ -1,5 +1,5 @@
+import { EmptyTodo } from "../EmptyTodo";
 import styles from "./Todo.module.css";
-import imgEmpty from "../../assets/empty.svg";
 
 export function Todo() {
   return (
@@ -19,16 +19,8 @@ export function Todo() {
             </div>
           </div>
         </div>
-        {/* Aqui abaixo sera um novo compoente */}
-        <div className={styles.wrapperTodoList}>
-          <div>
-            <img src={imgEmpty} alt="Imagem que representa um algo vazio." />
-          </div>
-          <div className={styles.todoListEmpty}>
-            <p>Você ainda não tem tarefas cadastradas</p>
-            <span>Crie tarefas e organize seus itens a fazer</span>
-          </div>
-        </div>
+        {/* Aqui depende da lista de Todos, um componente ou outro */}
+        <EmptyTodo />
       </div>
     </>
   );

@@ -1,0 +1,18 @@
+.wrapperTodoList {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-top: 1px var(--gray300) solid;
+  border-radius: 8px;
+  padding: 64px 0;
+}
+.todoListEmpty {
+  font-size: 16;
+  color: var(--gray300);
+}
+.todoListEmpty p {
+  font-weight: bold;
+}
