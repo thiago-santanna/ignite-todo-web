@@ -38,5 +38,15 @@ body {
   min-height: 100vh;
 }
 
+input {
+  background-color: var(--gray300);
+  color: var(--gray100);
+}
+input::placeholder {
+  color: var(--gray100);
+  font-weight: bold;
+  font-size: small;
+}
+
 @media (max-width: 768px) {
 }
