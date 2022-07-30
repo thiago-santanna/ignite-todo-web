@@ -3,6 +3,8 @@ import { ListTodo } from "../ListTodo";
 import styles from "./Todo.module.css";
 
 export function Todo() {
+  // aqui vou guardar os dados(states)
+
   return (
     <>
       <div className={styles.wrapper}>

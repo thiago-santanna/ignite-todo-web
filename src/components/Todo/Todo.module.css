@@ -32,8 +32,8 @@
 }
 .wrapperCount {
   background-color: var(--gray400);
-  border-radius: 50%;
-  width: 24px;
+  border-radius: 30%;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,4 +42,7 @@
   color: var(--gray200);
   font-weight: bold;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
 }

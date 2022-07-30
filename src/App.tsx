@@ -1,13 +1,9 @@
-import { Header } from "./components/Header";
-import { AddTodo } from "./components/AddTodo/index";
-import { Todo } from "./components/Todo";
+import { LoginOrRegister } from "./components/LoginOrRegister/index";
 
 export function App() {
   return (
     <>
-      <Header />
-      <AddTodo />
-      <Todo />
+      <LoginOrRegister />
     </>
   );
 }
