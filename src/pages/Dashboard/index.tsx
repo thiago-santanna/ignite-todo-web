@@ -14,7 +14,11 @@ export function Dashboard() {
 
   return (
     <>
-      <AddTodo handleAddTodo={handleAddTodo} />
+      <AddTodo
+        quantityTodos={5}
+        quantityTodosFinalized={2}
+        handleAddTodo={handleAddTodo}
+      />
       {todos.length == 0 ? <Todo /> : <EmptyTodo />}
     </>
   );

@@ -5,9 +5,15 @@ import { ContadorTodos } from "../ContadorTodo";
 
 interface IAddTodoPros {
   handleAddTodo: (todoDescription: string) => void;
+  quantityTodos: number;
+  quantityTodosFinalized: number;
 }
 
-export function AddTodo({ handleAddTodo }: IAddTodoPros): ReactElement {
+export function AddTodo({
+  handleAddTodo,
+  quantityTodos,
+  quantityTodosFinalized,
+}: IAddTodoPros): ReactElement {
   return (
     <>
       <div className={styles.wrapper}>
@@ -21,7 +27,10 @@ export function AddTodo({ handleAddTodo }: IAddTodoPros): ReactElement {
           <span>Criar</span>
           <img src={plus} alt="Imagem com símbolo de mais" />
         </section>
-        <ContadorTodos />
+        <ContadorTodos
+          quantityTodos={quantityTodos}
+          quantityTodosFinalized={quantityTodosFinalized}
+        />
       </div>
     </>
   );
