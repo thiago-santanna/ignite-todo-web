@@ -1,7 +1,8 @@
 import styles from "./EmptyTodo.module.css";
 import imgEmpty from "../../assets/empty.svg";
+import { ReactElement } from "react";
 
-export function EmptyTodo() {
+export function EmptyTodo(): ReactElement {
   return (
     <>
       <div className={styles.wrapperTodoList}>

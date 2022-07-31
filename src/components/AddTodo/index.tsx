@@ -1,7 +1,12 @@
 import styles from "./AddTodo.module.css";
 import plus from "../../assets/plus.svg";
+import { ReactElement } from "react";
 
-export function AddTodo() {
+interface IAddTodoPros {
+  handleAddTodo: (todoDescription: string) => void;
+}
+
+export function AddTodo({ handleAddTodo }: IAddTodoPros): ReactElement {
   return (
     <>
       <div className={styles.wrapper}>
