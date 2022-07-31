@@ -1,6 +1,7 @@
 import styles from "./AddTodo.module.css";
 import plus from "../../assets/plus.svg";
 import { ReactElement } from "react";
+import { ContadorTodos } from "../ContadorTodo";
 
 interface IAddTodoPros {
   handleAddTodo: (todoDescription: string) => void;
@@ -20,6 +21,7 @@ export function AddTodo({ handleAddTodo }: IAddTodoPros): ReactElement {
           <span>Criar</span>
           <img src={plus} alt="Imagem com símbolo de mais" />
         </section>
+        <ContadorTodos />
       </div>
     </>
   );

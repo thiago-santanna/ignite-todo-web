@@ -4,45 +4,6 @@
   max-height: 100vh;
   margin-top: 64px;
 }
-.headTodo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.todoCriada {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-}
-.todoConcluida {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-}
-.textCriada {
-  color: var(--blue);
-  font-weight: bold;
-  font-size: 14px;
-}
-.textConcluida {
-  color: var(--purple);
-  font-weight: bold;
-  font-size: 14px;
-}
-.wrapperCount {
-  background-color: var(--gray400);
-  border-radius: 30%;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.count {
-  color: var(--gray200);
-  font-weight: bold;
-  font-size: 12px;
-}
 
 @media (max-width: 768px) {
 }
