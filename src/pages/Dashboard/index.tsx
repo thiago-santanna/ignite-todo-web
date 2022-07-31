@@ -19,7 +19,7 @@ export function Dashboard() {
         quantityTodosFinalized={2}
         handleAddTodo={handleAddTodo}
       />
-      {todos.length == 0 ? <Todo /> : <EmptyTodo />}
+      {todos.length == 0 ? <Todo todos={todos} /> : <EmptyTodo />}
     </>
   );
 }
