@@ -3,11 +3,8 @@ import { LoginOrRegister } from "../../components/LoginOrRegister";
 import { Navigate } from "react-router-dom";
 
 export function Home() {
-  const [authenticated, setAuthenticated] = useState(false);
-
-  sessionStorage.getItem("sessionUser") &&
-    sessionStorage.removeItem("sessionUser");
-
+  const [authenticated, setAuthenticated] = useState(true);
+  // Aqui vai ter requisicao para testar o login
   return (
     <>
       {authenticated ? (

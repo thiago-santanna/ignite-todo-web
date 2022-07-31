@@ -6,7 +6,7 @@ export function AddTodo() {
     <>
       <div className={styles.wrapper}>
         <section className={styles.input}>
-          <form>
+          <form className={styles.formAddTodo}>
             <label>Adicione uma nova tarefa</label>
             <input type="text" />
           </form>
