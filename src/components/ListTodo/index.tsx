@@ -21,7 +21,6 @@ export function ListTodo(props: any) {
         </div>
         <div className={styles.wrapperTrash}>
           <Trash2 size={18} />
-          {/* <img src={imgTrash} alt="imagem de uma lixeira" /> */}
         </div>
       </div>
     </>

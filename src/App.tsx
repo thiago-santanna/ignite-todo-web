@@ -1,9 +1,9 @@
-import { LoginOrRegister } from "./components/LoginOrRegister/index";
+import Router from "./Router";
 
 export function App() {
   return (
     <>
-      <LoginOrRegister />
+      <Router />
     </>
   );
 }
