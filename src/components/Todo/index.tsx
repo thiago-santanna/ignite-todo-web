@@ -15,9 +15,6 @@ export function Todo({ todos }: ITodoProps): ReactElement {
   return (
     <>
       <div className={styles.wrapper}>
-        {/* Aqui depende da lista de Todos, um componente ou outro */}
-        {/* <EmptyTodo /> */}
-        {/* ou */}
         <ListTodo />
         <ListTodo />
         <ListTodo />
