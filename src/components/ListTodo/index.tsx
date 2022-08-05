@@ -3,8 +3,8 @@ import { Trash2 } from "react-feather";
 
 interface IPropsListTodo {
   todo: string;
-  handleCheckTodo: (id: string) => {};
-  handleDeleteTodo: (id: string) => {};
+  handleCheckTodo: (id: string) => void;
+  handleDeleteTodo: (id: string) => void;
 }
 
 export function ListTodo({
@@ -25,10 +25,7 @@ export function ListTodo({
           />
         </div>
         <div className={styles.wrapperText}>
-          <p>
-            Integer urna interdum massa libero auctor neque turpis turpis
-            semper. Duis vel sed famesinteger.
-          </p>
+          <p>{todo}</p>
         </div>
         <div onClick={() => handleDeleteTodo} className={styles.wrapperTrash}>
           <Trash2 size={18} />

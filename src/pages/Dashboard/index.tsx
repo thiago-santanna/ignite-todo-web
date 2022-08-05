@@ -9,8 +9,6 @@ export function Dashboard() {
   const [description, setDescription] = useState<string>("");
 
   function handleAddTodo(todoDescription: string) {}
-  function handleCompletedTodo(id: string) {}
-  function handleDeleteTodo(id: string) {}
 
   return (
     <>

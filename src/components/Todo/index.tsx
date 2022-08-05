@@ -10,16 +10,38 @@ interface ITodoProps {
 }
 
 export function Todo({ todos }: ITodoProps): ReactElement {
-  // aqui vou guardar os dados(states)
+  function handleCheckTodo(id: string) {}
+  function handleDeleteTodo(id: string) {}
+  const todo = "teste";
 
   return (
     <>
       <div className={styles.wrapper}>
-        <ListTodo />
-        <ListTodo />
-        <ListTodo />
-        <ListTodo />
-        <ListTodo />
+        <ListTodo
+          todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCheckTodo={handleCheckTodo}
+        />
+        <ListTodo
+          todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCheckTodo={handleCheckTodo}
+        />
+        <ListTodo
+          todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCheckTodo={handleCheckTodo}
+        />
+        <ListTodo
+          todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCheckTodo={handleCheckTodo}
+        />
+        <ListTodo
+          todo={todo}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCheckTodo={handleCheckTodo}
+        />
       </div>
     </>
   );

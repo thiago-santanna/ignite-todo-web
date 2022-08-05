@@ -3,7 +3,7 @@ import { LoginOrRegister } from "../../components/LoginOrRegister";
 import { Navigate } from "react-router-dom";
 
 export function Home() {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
   // Aqui vai ter requisicao para testar o login
   return (
     <>
