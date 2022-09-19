@@ -17,7 +17,7 @@ export function AddTodo({
   const [description, setDescription] = useState<string>("");
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={styles.wrapperAddTodo}>
         <section className={styles.input}>
           <form className={styles.formAddTodo}>
             <label>Adicione uma nova tarefa</label>

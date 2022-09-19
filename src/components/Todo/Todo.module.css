@@ -1,8 +1,12 @@
-.wrapper {
+.wrapperTodo {
   margin: 0 auto;
   max-width: 745px;
   max-height: 100vh;
-  margin-top: 64px;
+  display: block;
+}
+
+.wrapperTodo:first-child {
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {

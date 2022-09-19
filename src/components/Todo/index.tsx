@@ -14,10 +14,10 @@ export function Todo({ todos }: ITodoProps): ReactElement {
   function handleDeleteTodo(id: string) {}
 
   return (
-    <>
+    <div>
       {todos &&
         todos.map((todo) => (
-          <div key={todo.id} className={styles.wrapper}>
+          <div key={todo.id} className={styles.wrapperTodo}>
             <ListTodo
               todo={todo.descricao}
               initialState={todo.situacao}
@@ -26,6 +26,6 @@ export function Todo({ todos }: ITodoProps): ReactElement {
             />
           </div>
         ))}
-    </>
+    </div>
   );
 }
