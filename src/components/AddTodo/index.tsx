@@ -1,6 +1,6 @@
 import styles from "./AddTodo.module.css";
 import plus from "../../assets/plus.svg";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { ContadorTodos } from "../ContadorTodo";
 
 interface IAddTodoPros {
@@ -14,19 +14,27 @@ export function AddTodo({
   quantityTodos,
   quantityTodosFinalized,
 }: IAddTodoPros): ReactElement {
+  const [description, setDescription] = useState<string>("");
   return (
     <>
       <div className={styles.wrapper}>
         <section className={styles.input}>
           <form className={styles.formAddTodo}>
             <label>Adicione uma nova tarefa</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={description}
+              onChange={(event) => setDescription(event.target.value)}
+            />
           </form>
         </section>
-        <section className={styles.button}>
+        <button
+          onClick={() => handleAddTodo(description)}
+          className={styles.button}
+        >
           <span>Criar</span>
           <img src={plus} alt="Imagem com símbolo de mais" />
-        </section>
+        </button>
         <ContadorTodos
           quantityTodos={quantityTodos}
           quantityTodosFinalized={quantityTodosFinalized}

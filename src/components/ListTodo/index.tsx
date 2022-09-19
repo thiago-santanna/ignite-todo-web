@@ -3,12 +3,14 @@ import { Trash2 } from "react-feather";
 
 interface IPropsListTodo {
   todo: string;
+  initialState: boolean;
   handleCheckTodo: (id: string) => void;
   handleDeleteTodo: (id: string) => void;
 }
 
 export function ListTodo({
   todo,
+  initialState,
   handleCheckTodo,
   handleDeleteTodo,
 }: IPropsListTodo) {
@@ -19,6 +21,8 @@ export function ListTodo({
           <input
             onClick={() => handleCheckTodo}
             className={styles.checkboxRound}
+            onChange={() => handleCheckTodo}
+            checked={initialState}
             type="checkbox"
             name="feito"
             id="feito"

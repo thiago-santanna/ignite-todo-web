@@ -12,37 +12,20 @@ interface ITodoProps {
 export function Todo({ todos }: ITodoProps): ReactElement {
   function handleCheckTodo(id: string) {}
   function handleDeleteTodo(id: string) {}
-  const todo = "teste";
 
   return (
     <>
-      <div className={styles.wrapper}>
-        <ListTodo
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
-        <ListTodo
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
-        <ListTodo
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
-        <ListTodo
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
-        <ListTodo
-          todo={todo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCheckTodo={handleCheckTodo}
-        />
-      </div>
+      {todos &&
+        todos.map((todo) => (
+          <div key={todo.id} className={styles.wrapper}>
+            <ListTodo
+              todo={todo.descricao}
+              initialState={todo.situacao}
+              handleDeleteTodo={handleDeleteTodo}
+              handleCheckTodo={handleCheckTodo}
+            />
+          </div>
+        ))}
     </>
   );
 }

@@ -1,4 +1,5 @@
 import styles from "./LoginOrRegister.module.css";
+import { Navigate } from "react-router-dom";
 
 export function LoginOrRegister() {
   return (
