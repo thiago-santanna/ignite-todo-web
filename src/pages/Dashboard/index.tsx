@@ -53,6 +53,21 @@ export function Dashboard() {
     return resultado;
   }
 
+  function handleCheckTodo(id: string) {
+    console.log(todos);
+    const filteredTodo = todos.filter((todo) => {
+      if (todo.id === id) {
+        todo.situacao = !todo.situacao;
+      }
+      return todo;
+    });
+    console.log(filteredTodo);
+    setTodos(filteredTodo);
+  }
+  function handleDeleteTodo(id: string) {
+    const filteredTodo = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodo);
+  }
   return (
     <div>
       <Header />
@@ -61,7 +76,15 @@ export function Dashboard() {
         quantityTodosFinalized={todosFinalizados}
         handleAddTodo={handleAddTodo}
       />
-      {todos.length !== 0 ? <Todo todos={todos} /> : <EmptyTodo />}
+      {todos.length !== 0 ? (
+        <Todo
+          todos={todos}
+          handleCheckTodo={handleCheckTodo}
+          handleDeleteTodo={handleDeleteTodo}
+        />
+      ) : (
+        <EmptyTodo />
+      )}
     </div>
   );
 }

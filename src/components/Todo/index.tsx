@@ -1,29 +1,45 @@
-import { ContadorTodos } from "../ContadorTodo";
-import { EmptyTodo } from "../EmptyTodo";
-import { ListTodo } from "../ListTodo";
 import styles from "./Todo.module.css";
 import { ITodo } from "../../types/Todo";
 import { ReactElement } from "react";
+import { Trash2 } from "react-feather";
 
 interface ITodoProps {
   todos: ITodo[];
+  handleCheckTodo: (id: string) => void;
+  handleDeleteTodo: (id: string) => void;
 }
 
-export function Todo({ todos }: ITodoProps): ReactElement {
-  function handleCheckTodo(id: string) {}
-  function handleDeleteTodo(id: string) {}
-
+export function Todo({
+  todos,
+  handleCheckTodo,
+  handleDeleteTodo,
+}: ITodoProps): ReactElement {
   return (
     <div>
       {todos &&
         todos.map((todo) => (
           <div key={todo.id} className={styles.wrapperTodo}>
-            <ListTodo
-              todo={todo.descricao}
-              initialState={todo.situacao}
-              handleDeleteTodo={handleDeleteTodo}
-              handleCheckTodo={handleCheckTodo}
-            />
+            <div className={styles.wrapperListTodo}>
+              <div className={styles.wrapperInput}>
+                <input
+                  className={styles.checkboxRound}
+                  onChange={() => handleCheckTodo(todo.id)}
+                  checked={todo.situacao}
+                  type="checkbox"
+                  name="feito"
+                  id="feito"
+                />
+              </div>
+              <div className={styles.wrapperText}>
+                <p>{todo.descricao}</p>
+              </div>
+              <div
+                onClick={() => handleDeleteTodo(todo.id)}
+                className={styles.wrapperTrash}
+              >
+                <Trash2 size={18} />
+              </div>
+            </div>
           </div>
         ))}
     </div>
