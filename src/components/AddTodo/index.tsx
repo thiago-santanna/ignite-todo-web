@@ -15,6 +15,11 @@ export function AddTodo({
   quantityTodosFinalized,
 }: IAddTodoPros): ReactElement {
   const [description, setDescription] = useState<string>("");
+
+  function setDescriptionTodo(description: string) {
+    handleAddTodo(description);
+    setDescription("");
+  }
   return (
     <>
       <div className={styles.wrapperAddTodo}>
@@ -29,7 +34,7 @@ export function AddTodo({
           </form>
         </section>
         <button
-          onClick={() => handleAddTodo(description)}
+          onClick={() => setDescriptionTodo(description)}
           className={styles.button}
         >
           <span>Criar</span>

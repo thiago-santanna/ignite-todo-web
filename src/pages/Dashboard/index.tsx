@@ -6,37 +6,22 @@ import { ITodo } from "../../types/Todo";
 import { Header } from "../../components/Header";
 
 export function Dashboard() {
-  const [todos, setTodos] = useState<ITodo[]>([
-    {
-      id: "1020",
-      descricao: "Fazer compras",
-      situacao: false,
-      data: "19/09/2022",
-    },
-    {
-      id: "1021",
-      descricao: "Finalizar desafio Ignite",
-      situacao: true,
-      data: "19/09/2022",
-    },
-  ]);
+  const [todos, setTodos] = useState<ITodo[]>([]);
   const [todosFinalizados, setTodosFinalizados] = useState(0);
 
   useEffect(() => {
-    const finalizados = verificaFinalizados;
+    let finalizados = 0;
+    todos.forEach((todo) => (todo.situacao === true ? (finalizados += 1) : 0));
     setTodosFinalizados(finalizados);
   }, [todos]);
 
   function handleAddTodo(todoDescription: string) {
-    const hoje = new Date();
-
     const newTodo: ITodo = {
       id: getRandomInt(1, 1000),
       descricao: todoDescription,
       situacao: false,
-      data: hoje.toLocaleDateString(),
+      data: new Date().toLocaleDateString(),
     };
-
     setTodos((oldTodos) => [...oldTodos, newTodo]);
   }
 
@@ -47,21 +32,13 @@ export function Dashboard() {
     return resultado.toString();
   }
 
-  function verificaFinalizados(): number {
-    let resultado = 0;
-    todos.forEach((todo) => (todo.situacao === true ? (resultado += 1) : 0));
-    return resultado;
-  }
-
   function handleCheckTodo(id: string) {
-    console.log(todos);
     const filteredTodo = todos.filter((todo) => {
       if (todo.id === id) {
         todo.situacao = !todo.situacao;
       }
       return todo;
     });
-    console.log(filteredTodo);
     setTodos(filteredTodo);
   }
   function handleDeleteTodo(id: string) {
